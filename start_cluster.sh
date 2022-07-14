@@ -17,3 +17,4 @@ kubectl -n ${NAMESPACE} apply -f ${K8S_MANIFESTS_DIR}/pt_inference.yaml
 
 echo Showing pods..
 kubectl get pods -n ${NAMESPACE}
+
