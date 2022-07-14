@@ -6,7 +6,7 @@ echo Setting environment variables using .env..
 source .env
 
 echo Prepare infrastructure configuration..
-bash pt_serve_util.sh
+bash src/pt_serve_util.sh
 
 echo Create the cluster using eksctl..
 eksctl create cluster -f ${K8S_MANIFESTS_DIR}/cluster.yaml
