@@ -78,7 +78,6 @@ generate_aws_infra_configs() {
   # copy template yaml files into the manifest dir
   cp template/pt_inference.yaml ${K8S_MANIFESTS_DIR}/pt_inference.yaml
   cp template/cluster.yaml ${K8S_MANIFESTS_DIR}/cluster.yaml
-  cp template/eks_ami_policy.json eks_ami_policy.json
 
   # Replace placehold with user configurations
   replace_text_in_file "your_cluster_name" ${AWS_CLUSTER_NAME} ${K8S_MANIFESTS_DIR}/cluster.yaml
@@ -91,8 +90,7 @@ generate_aws_infra_configs() {
   IMAGE_URI="${AWS_ACCOUNT}.dkr.ecr.${AWS_REGION}.amazonaws.com/${image}"
   replace_text_in_file "your_image_ecr_uri" ${IMAGE_URI} ${K8S_MANIFESTS_DIR}/pt_inference.yaml
   replace_text_in_file "your_service_name" ${PT_SERVE_NAME} ${K8S_MANIFESTS_DIR}/pt_inference.yaml
-  replace_text_in_file '{$REGION}' ${AWS_REGION} eks_ami_policy.json
-  replace_text_in_file '{$ACCOUNT}' ${AWS_ACCOUNT} eks_ami_policy.json
+
 }
 
 check_installed_deps
