@@ -4,6 +4,22 @@
 
 Please [install](https://github.com/smart-patrol/pytorch-serve-eks/blob/master/installation.md) required packages to complete this walkthrough.
 
+## Quick run:
+
+```
+# Start the cluster
+bash start_cluster.sh
+
+# Watch pods until STATUS=Running
+kubectl get pods -n ${NAMESPACE}
+
+# Register the models
+bash register_models.sh
+
+# Delete the cluster when done
+bash delete_cluster.sh
+```
+
 ## Setup Environment Variables
 
 ```
