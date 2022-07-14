@@ -8,6 +8,10 @@ Please [install](https://github.com/smart-patrol/pytorch-serve-eks/blob/master/i
 
 ```
 # Set any environment variables in .env if you wish
+source .env
+
+# Prepare infrastructure configuration + save to k8s_manifests.. (or skip if this is done already)
+bash src/pt_serve_util.sh
 
 # Start the cluster
 bash start_cluster.sh
