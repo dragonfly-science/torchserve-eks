@@ -7,6 +7,8 @@ Please [install](https://github.com/smart-patrol/pytorch-serve-eks/blob/master/i
 ## Quick run:
 
 ```
+# Set any environment variables in .env if you wish
+
 # Start the cluster
 bash start_cluster.sh
 
