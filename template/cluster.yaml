@@ -7,8 +7,8 @@ metadata:
   
 nodeGroups:
   - name: ng-1
-    instanceType: g4dn.xlarge
-    desiredCapacity: 1
+    instanceType: c5.large
+    desiredCapacity: 2
 
 cloudWatch:
   clusterLogging:

@@ -35,7 +35,7 @@ spec:
     spec:
       containers:
       - name: your_service_name
-        image: "pytorch/torchserve:latest-gpu"
+        image: "121565642659.dkr.ecr.us-east-1.amazonaws.com/ipu-waha-korero-torchserve:2678d10"
         ports:
         - name: ts
           containerPort: 8080
@@ -46,7 +46,8 @@ spec:
           limits:
             cpu: 4
             memory: 4Gi
-            nvidia.com/gpu: 1
+            nvidia.com/gpu: 0
           requests:
             cpu: "1"
-            memory: 1Gi        
+            memory: 2Gi
+
