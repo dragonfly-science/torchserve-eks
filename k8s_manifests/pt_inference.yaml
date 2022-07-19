@@ -44,7 +44,7 @@ spec:
         imagePullPolicy: IfNotPresent
         resources:
           limits:
-            cpu: 4
+            cpu: 2
             memory: 4Gi
             nvidia.com/gpu: 0
           requests:
