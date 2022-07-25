@@ -7,7 +7,7 @@ metadata:
   
 nodeGroups:
   - name: ng-1
-    instanceType: c5.large
+    instanceType: t2.medium
     desiredCapacity: 1
 
 cloudWatch:

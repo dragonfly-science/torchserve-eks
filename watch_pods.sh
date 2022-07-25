@@ -1,2 +1,2 @@
 source .env
-watch kubectl get pods -n ${NAMESPACE}
+watch kubectl describe pods -n ${NAMESPACE}
